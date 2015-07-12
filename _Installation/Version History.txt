@@ -1,0 +1,51 @@
+04.00.00
+Rewrite of module.
+
+04.00.01
+Add accept and user agent for web request
+Remove email address constraints
+Remove Rfc822FormatDate constraints
+Add option to not use Ajax rendering in module settings
+Reorganized and rewritten Javascript to allow rendering of multiple News modules on a single page in Ajax mode
+Fix for XHTML issue (div ending with span)
+
+04.01.00
+Background loading of feeds (scheduled task)
+Ability to use custom transformations on incoming feeds
+Better feedback on feed processing errors
+Ability to switch off Ajax post load feature
+
+04.02.00
+Enhancement: Dependency to DotNetNuke 05.04.04 (20320)
+Enhancement: Solution file in VS 2010 (20320)
+Enhancement: .Net dependency to 3.5 (20320)
+Enhancement: DNN 5 module manifest with license and release notes (20320)
+Fix: Fixed saving of referenced XSL files for preprocessing (19826)
+Enhancement: Selectable link target (18288)
+Fix: Fixed bug where feeds were not initially displayed (17998)
+Enhancement: Syndicate module's aggregated feed (20321)
+Fix: Fixed the aggregator changing pubDate on retrieved feeds (20322)
+Enhancement: Only users with edit permission can now clear the feed cache for a module (20323)
+Enhancement: Prettyfied the default transform
+Enhancement: Hid datagrid headers in edit screen if no feeds are defined yet
+
+04.02.01
+Fix: Changed the SqlDataProvider Constructor to conform to new pattern with connection string
+
+04.02.02
+Enhancement: Added pubDateParsedLocalTime to RSS item with local time conversion of the time an item was published
+
+04.02.03
+Fix: SQL script now Azure compliant
+
+05.00.00
+Change: Dependency moved to DNN 07.00.00!
+New Feature: New WebAPI services to extract RSS feed in either RSS or ATOM
+Change: Removed RssToolkit from the project which was causing a lot of issues
+Change: Namespaces reshuffled
+Change: Moved system transformations to Resources folder in module folder for clarity's sake
+
+05.00.01
+Enhancement: Aggregator now preserves added custom elements (extensions) from original feeds
+Enhancement: Added XSL extension to properly format dates in .net fashion
+Enhancement: Added new transformation for upcoming Events module to take advantage of specific event data fields

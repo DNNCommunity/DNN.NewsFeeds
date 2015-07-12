@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="D:\Programs\Nant\ChangelogToVersionDoc.xsl"?>
+<changelog project="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="D:\Programs\Nant\Changelog.xsd">
+ <release version="04.02.00">
+  <change type="Enhancement" bugcode="20320">Dependency to DotNetNuke 05.04.04</change>
+  <change type="Enhancement" bugcode="20320">Solution file in VS 2010</change>
+  <change type="Enhancement" bugcode="20320">.Net dependency to 3.5</change>
+  <change type="Enhancement" bugcode="20320">DNN 5 module manifest with license and release notes</change>
+  <change type="Fix" bugcode="19826">Fixed saving of referenced XSL files for preprocessing</change>
+  <change type="Enhancement" bugcode="18288">Selectable link target</change>
+  <change type="Fix" bugcode="17998">Fixed bug where feeds were not initially displayed</change>
+  <change type="Enhancement" bugcode="20321">Syndicate module's aggregated feed</change>
+  <change type="Fix" bugcode="20322">Fixed the aggregator changing pubDate on retrieved feeds</change>
+  <change type="Enhancement" bugcode="20323">Only users with edit permission can now clear the feed cache for a module</change>
+  <change type="Enhancement">Prettyfied the default transform</change>
+  <change type="Enhancement">Hid datagrid headers in edit screen if no feeds are defined yet</change>
+ </release>
+ <release version="04.02.01">
+  <change type="Fix">Changed the SqlDataProvider Constructor to conform to new pattern with connection string</change>
+ </release>
+ <release version="04.02.02">
+  <change type="Enhancement">Added pubDateParsedLocalTime to RSS item with local time conversion of the time an item was published</change>
+ </release>
+ <release version="04.02.03">
+  <change type="Fix">SQL script now Azure compliant</change>
+ </release>
+ <release version="05.00.00">
+  <change type="Change">Dependency moved to DNN 07.00.00!</change>
+  <change type="New Feature">New WebAPI services to extract RSS feed in either RSS or ATOM</change>
+  <change type="Change">Removed RssToolkit from the project which was causing a lot of issues</change>
+  <change type="Change">Namespaces reshuffled</change>
+  <change type="Change">Moved system transformations to Resources folder in module folder for clarity's sake</change>
+ </release>
+ <release version="05.00.01">
+  <change type="Enhancement">Aggregator now preserves added custom elements (extensions) from original feeds</change>
+  <change type="Enhancement">Added XSL extension to properly format dates in .net fashion</change>
+  <change type="Enhancement">Added new transformation for upcoming Events module to take advantage of specific event data fields</change>
+  <change type="Fix">Make compressed incoming RSS streams auto decompress. This will solve issues with the new Twitter feeds.</change>
+  <change type="Fix">Readded pubDateParsed and pubDateParsedLocalTime which were lost during the 5.0 upgrade to .net Syndication Framework</change>
+  <change type="Enhancement">Added transformation for upcoming Events module RSS which should include custom events data that we can leverage in this module</change>
+  <change type="Enhancement">Cosmetic improvements to the edit UI</change>
+  <change type="Enhancement">Added RSS icon to main screen</change>
+ </release>
+</changelog>

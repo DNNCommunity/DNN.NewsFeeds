@@ -1,0 +1,19 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DotNetNuke.News", "DotNetNuke.News.vbproj", "{E0B28AA9-4623-41F9-B642-F689AE17C6AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E0B28AA9-4623-41F9-B642-F689AE17C6AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0B28AA9-4623-41F9-B642-F689AE17C6AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0B28AA9-4623-41F9-B642-F689AE17C6AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0B28AA9-4623-41F9-B642-F689AE17C6AF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

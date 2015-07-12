@@ -1,0 +1,20 @@
+﻿.DNN_News_ItemLink 
+{
+ font-size: larger;
+ font-weight: bold;
+ margin-bottom: 0px;
+}
+.DNN_News_ItemDate 
+{
+ font-style: italic;
+ margin: 0px;
+}
+.DNN_News_ItemDetails 
+{
+ margin: 0px;
+}
+p.rssLine
+{
+ width: 100%;
+ text-align: right;
+}

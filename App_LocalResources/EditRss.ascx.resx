@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ModuleHelp.Text" xml:space="preserve">
+    <value>&lt;h1&gt;About The News Feeds (RSS) Module&lt;/h1&gt;
+&lt;p&gt;The News Feed Module provides visitors with collected excerpts of content from other modules/websites. This is done via so-called 'syndication'. The News Feeds module accepts feeds in Rss 2.0, Rss 0.91, Atom 1.0, OPML&amp;#160;and RDF. Feeds &lt;strong&gt;must conform &lt;/strong&gt;to these standards to be able to be shown with this module.&lt;/p&gt;
+&lt;p&gt;The News Feeds module allows you to specify multiple feeds to be aggregated into one feed. The items in the feed will be sorted according to the published date or (if date is not available) they will be interleaved.&lt;/p&gt;
+&lt;h1&gt;Edit News Feed&lt;/h1&gt;
+&lt;ol&gt;
+    &lt;li&gt;Add a &lt;strong&gt;News Feed&lt;/strong&gt; module, or go to an existing &lt;strong&gt;News Feed&lt;/strong&gt; module.&lt;/li&gt;
+    &lt;li&gt;Click &lt;strong&gt;Edit Newsfeeds&lt;/strong&gt;.&lt;/li&gt;
+    &lt;li&gt;Click &lt;strong&gt;Add Feed&lt;/strong&gt;. Alternatively you can click the edit icon before one of the listed feeds.&lt;/li&gt;
+    &lt;li&gt;Enter the URL of the feed, time (in minutes) to cache the feed, and user credentials if applicable (with feeds where authentication is needed).&lt;/li&gt;
+    &lt;li&gt;Click &lt;strong&gt;Update&lt;/strong&gt; to save changes to the list of feeds.&lt;/li&gt;
+    &lt;li&gt;Repeat steps 3 to 5 as long as necessary.&lt;/li&gt;
+    &lt;li&gt;Click &lt;strong&gt;Update&lt;/strong&gt; to save all changes and return to the page.&lt;/li&gt;
+&lt;/ol&gt;</value>
+  </data>
+  <data name="ControlTitle_edit.Text" xml:space="preserve">
+    <value>Edit News Feeds (RSS)</value>
+  </data>
+  <data name="plCacheTime.Help" xml:space="preserve">
+    <value>Time in minutes between refreshes for this feed. Set to -1 to read the default from the stream and use that.</value>
+  </data>
+  <data name="plCacheTime.Text" xml:space="preserve">
+    <value>Cache Time</value>
+  </data>
+  <data name="plFeedUrl.Help" xml:space="preserve">
+    <value>Link to the rss feed</value>
+  </data>
+  <data name="plFeedUrl.Text" xml:space="preserve">
+    <value>Feed Url</value>
+  </data>
+  <data name="plPassword.Help" xml:space="preserve">
+    <value>Password in case authentication is required.</value>
+  </data>
+  <data name="plPassword.Text" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="plUser.Help" xml:space="preserve">
+    <value>If authentication is required specify user account here.</value>
+  </data>
+  <data name="plUser.Text" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="PasswordEncoded.Text" xml:space="preserve">
+    <value>[Password is encoded]</value>
+  </data>
+  <data name="valWholeNumber.Error" xml:space="preserve">
+    <value>Not a valid (whole) number!</value>
+  </data>
+  <data name="Required.Error" xml:space="preserve">
+    <value>Required!</value>
+  </data>
+  <data name="cmdAdd.Text" xml:space="preserve">
+    <value>Add Feed</value>
+  </data>
+  <data name="Delete.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Atom.Option" xml:space="preserve">
+    <value>ATOM 1.0 Transformation</value>
+  </data>
+  <data name="plCache.Help" xml:space="preserve">
+    <value>This is the feed as it is currently in the cache. You can use this to analyze any issues.</value>
+  </data>
+  <data name="plCache.Text" xml:space="preserve">
+    <value>Currently in Cache</value>
+  </data>
+  <data name="plOverrideTransform.Help" xml:space="preserve">
+    <value>You can specify a transformation to be used on the feed as it is retrieved. This can be useful in fixing faulty feeds (feeds that do not conform to their standard) or in using extended feeds. If specifying a custom feed in the textbox, use a url to the XSLfile. Note you can also add your own XSLtransformations to portals/[id]/Newsfeeds/Transformations/ and they will show in the dropdown.</value>
+  </data>
+  <data name="plOverrideTransform.Text" xml:space="preserve">
+    <value>Feed Transformation</value>
+  </data>
+  <data name="Rdf.Option" xml:space="preserve">
+    <value>RDF Transformation</value>
+  </data>
+  <data name="Rss091.Option" xml:space="preserve">
+    <value>RSS 0.91 Transformation</value>
+  </data>
+  <data name="UseDefault.Option" xml:space="preserve">
+    <value>Use Default Transformation</value>
+  </data>
+  <data name="lblCustomTransform.Text" xml:space="preserve">
+    <value>Custom Transform</value>
+  </data>
+  <data name="lblFeedUrl.Text" xml:space="preserve">
+    <value>Feed Url</value>
+  </data>
+  <data name="lblSecure.Text" xml:space="preserve">
+    <value>Secure Feed</value>
+  </data>
+  <data name="optStandard.Text" xml:space="preserve">
+    <value>The dropdown below shows standard transformations and those stored in directory&lt;br /&gt;&lt;i&gt;Portals/{0}/Newsfeeds/Transformations&lt;/i&gt;</value>
+  </data>
+  <data name="optType.Text" xml:space="preserve">
+    <value>Specify a type that implements IPreProcessor to preprocess the feed.</value>
+  </data>
+  <data name="Twitter.Option" xml:space="preserve">
+    <value>Internal Twitter Transformation</value>
+  </data>
+  <data name="optUrl.Text" xml:space="preserve">
+    <value>Specify a url to an xsl file to use for preprocessing.</value>
+  </data>
+  <data name="Delete.Confirm" xml:space="preserve">
+    <value>Do you really want to delete the selected RSS feed?</value>
+  </data>
+</root>

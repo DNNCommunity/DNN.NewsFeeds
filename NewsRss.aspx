@@ -1,0 +1,1 @@
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="NewsRss.aspx.vb" Inherits="DotNetNuke.Modules.News.NewsRss" %>

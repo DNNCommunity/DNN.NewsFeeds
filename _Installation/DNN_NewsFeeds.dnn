@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dotnetnuke xmlns:fo="http://www.w3.org/1999/XSL/Format" type="Package" version="5.0">
+ <packages>
+  <package type="Module" name="DNN_NewsFeeds" version="00.00.00">
+   <friendlyName>News Feeds (RSS)</friendlyName>
+   <description>News Feed allows you to aggregate a collection of syndicated news feeds in Rich Site Summary (RSS) format and render the results in a single sorted list.</description>
+   <owner>
+    <name>Shaun Walker</name>
+    <organization>DotNetNuke Corporation</organization>
+    <url>http://www.dotnetnuke.com</url>
+    <email/>
+   </owner>
+   <license src="License.txt"/>
+   <releaseNotes src="ReleaseNotes.txt"/>
+   <dependencies>
+    <dependency type="CoreVersion">07.00.00</dependency>
+   </dependencies>
+   <components>
+    <component type="Module">
+     <desktopModule>
+      <moduleName>DNN_NewsFeeds</moduleName>
+      <foldername>News</foldername>
+      <businessControllerClass>DotNetNuke.Modules.News.NewsController, DOTNETNUKE.MODULES.NEWS</businessControllerClass>
+      <supportedFeatures>
+       <supportedFeature type="Portable"/>
+       <supportedFeature type="Upgradeable"/>
+      </supportedFeatures>
+      <moduleDefinitions>
+       <moduleDefinition>
+        <friendlyName>News Feeds (RSS)</friendlyName>
+        <defaultCacheTime>0</defaultCacheTime>
+        <moduleControls>
+         <moduleControl>
+          <controlKey/>
+          <controlSrc>DesktopModules/News/RssModule.ascx</controlSrc>
+          <supportsPartialRendering/>
+          <controlTitle>News Feeds (RSS)</controlTitle>
+          <controlType>View</controlType>
+          <iconFile/>
+          <helpUrl>http://www.dotnetnuke.com/default.aspx?tabid=787</helpUrl>
+          <viewOrder/>
+         </moduleControl>
+         <moduleControl>
+          <controlKey>Edit</controlKey>
+          <controlSrc>DesktopModules/News/EditRss.ascx</controlSrc>
+          <supportsPartialRendering/>
+          <controlTitle>Edit News Feeds (RSS)</controlTitle>
+          <controlType>Admin</controlType>
+          <iconFile/>
+          <helpUrl>http://www.dotnetnuke.com/default.aspx?tabid=787</helpUrl>
+          <viewOrder/>
+         </moduleControl>
+         <moduleControl>
+          <controlKey>Settings</controlKey>
+          <controlSrc>DesktopModules/News/Settings.ascx</controlSrc>
+          <supportsPartialRendering/>
+          <controlTitle>News Feeds Settings</controlTitle>
+          <controlType>Edit</controlType>
+          <iconFile/>
+          <helpUrl>http://www.dotnetnuke.com/default.aspx?tabid=787</helpUrl>
+          <viewOrder/>
+         </moduleControl>
+        </moduleControls>
+        <permissions/>
+       </moduleDefinition>
+      </moduleDefinitions>
+     </desktopModule>
+     <eventMessage>
+      <processorType>DotNetNuke.Entities.Modules.EventMessageProcessor, DotNetNuke</processorType>
+      <processorCommand>UpgradeModule</processorCommand>
+      <attributes>
+       <businessControllerClass>DotNetNuke.Modules.News.NewsController, DOTNETNUKE.MODULES.NEWS</businessControllerClass>
+       <desktopModuleID>[DESKTOPMODULEID]</desktopModuleID>
+       <upgradeVersionsList>04.00.00</upgradeVersionsList>
+      </attributes>
+     </eventMessage>
+    </component>
+   </components>
+  </package>
+ </packages>
+</dotnetnuke>
