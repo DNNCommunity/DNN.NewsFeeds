@@ -49,3 +49,6 @@ Change: Moved system transformations to Resources folder in module folder for cl
 Enhancement: Aggregator now preserves added custom elements (extensions) from original feeds
 Enhancement: Added XSL extension to properly format dates in .net fashion
 Enhancement: Added new transformation for upcoming Events module to take advantage of specific event data fields
+
+05.01.00
+Enhancement: Updated to comply with DNN 8 API

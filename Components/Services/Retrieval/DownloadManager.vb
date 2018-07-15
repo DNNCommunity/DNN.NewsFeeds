@@ -66,7 +66,7 @@ Namespace Services.Retrieval
      End If
     End If
    End If
-   Dim settings As New ModuleSettings(ModuleId)
+   Dim settings As ModuleSettings = ModuleSettings.GetSettings(ModuleId)
    Return settings.DefaultCacheTime
   End Function
 

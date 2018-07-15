@@ -56,7 +56,7 @@ Namespace Services.Retrieval
         If Not IO.Directory.Exists(portal.HomeDirectoryMapPath & "\Cache\") Then
          IO.Directory.CreateDirectory(portal.HomeDirectoryMapPath & "\Cache\")
         End If
-        Dim settings As ModuleSettings = ModuleSettings.GetModuleSettings(ModuleId)
+        Dim settings As ModuleSettings = ModuleSettings.GetSettings(m)
         Dim aggregator As New FeedAggregator(portal.HomeDirectoryMapPath & "\Cache\", settings, ModuleTitle)
         aggregator.Load(FeedController.GetFeedsByModule(ModuleId))
         Common.SaveResultFeed(aggregator.ToXml, ModuleId, portal.HomeDirectoryMapPath & "\Cache\")

@@ -72,7 +72,7 @@ Partial Public Class Settings
     Next
     ddXsl.Items.Add(New ListItem(GetString("Other.Option", Me.LocalResourceFile), ""))
 
-    Dim Settings As New ModuleSettings(Me.ModuleId)
+    Dim Settings As ModuleSettings = News.ModuleSettings.GetSettings(ModuleConfiguration)
     Dim xslsrc As String = Settings.XslUrl
 
     Try
@@ -132,7 +132,7 @@ Partial Public Class Settings
  Public Overrides Sub UpdateSettings()
   Try
 
-   Dim Settings As New ModuleSettings(Me.ModuleId)
+   Dim Settings As ModuleSettings = News.ModuleSettings.GetSettings(ModuleConfiguration)
    With Settings
     .DefaultCacheTime = Integer.Parse(txtDefaultCacheTime.Text)
     If ddXsl.SelectedValue = "" Then
@@ -148,7 +148,7 @@ Partial Public Class Settings
     .RetryTimes = Integer.Parse(txtRetryTimes.Text)
     .RetryTimeOut = Integer.Parse(txtRetryTimeOut.Text)
     .Target = ddTarget.SelectedValue
-    .Save()
+    .SaveSettings(ModuleConfiguration)
    End With
 
   Catch exc As Exception

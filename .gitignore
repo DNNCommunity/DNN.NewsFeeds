@@ -216,3 +216,6 @@ Thumbs.db
 # Folder config file
 Desktop.ini
 Website/Install/Temp/
+__*
+bin/
+obj/

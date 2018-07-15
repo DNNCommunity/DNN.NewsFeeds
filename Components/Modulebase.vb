@@ -34,7 +34,7 @@ Public Class Modulebase
  Public Shadows Property Settings() As ModuleSettings
   Get
    If _modSettings Is Nothing Then
-    _modSettings = ModuleSettings.GetModuleSettings(ModuleId)
+    _modSettings = ModuleSettings.GetSettings(ModuleConfiguration)
    End If
    Return _modSettings
   End Get

@@ -56,12 +56,10 @@ Public Class NewsController
   settings.OmitXmlDeclaration = True
 
   sb.Append("<News><Settings>")
-  Dim moduleSettings As Hashtable
-  Dim objModules As New DotNetNuke.Entities.Modules.ModuleController
-  moduleSettings = objModules.GetModuleSettings(ModuleID)
-  For Each name As String In moduleSettings.Keys
+  Dim mi As ModuleInfo = (New ModuleController).GetModule(ModuleID)
+  For Each name As String In mi.ModuleSettings.Keys
    sb.Append("<Setting Name=""" + name + """>")
-   sb.Append("<Value>" + XMLEncode(moduleSettings(name).ToString) + "</Value>")
+   sb.Append("<Value>" + XMLEncode(mi.ModuleSettings(name).ToString) + "</Value>")
    sb.Append("</Setting>")
   Next
   sb.Append("</Settings>")

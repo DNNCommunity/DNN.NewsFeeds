@@ -24,72 +24,73 @@ Imports DotNetNuke.Entities.Users
 Imports DotNetNuke.Entities.Portals
 
 Public Class NewsRss
-  Inherits DotNetNuke.Framework.PageBase
+ Inherits DotNetNuke.Framework.PageBase
 
 #Region " Private Members "
-  Private _authorized As Boolean = False
-  Private _modSettings As ModuleSettings
-  Private _moduleId As Integer = -1
-  Private _portalId As Integer = -1
-  Private _tabId As Integer = -1
+ Private _authorized As Boolean = False
+ Private _modSettings As ModuleSettings
+ Private _module As ModuleInfo
+ Private _moduleId As Integer = -1
+ Private _portalId As Integer = -1
+ Private _tabId As Integer = -1
 #End Region
 
 #Region " Properties "
-  Public Property Settings() As ModuleSettings
-    Get
-      If _modSettings Is Nothing Then
-        _modSettings = ModuleSettings.GetModuleSettings(_moduleId)
-      End If
-      Return _modSettings
-    End Get
-    Set(ByVal value As ModuleSettings)
-      _modSettings = value
-    End Set
-  End Property
+ Public Property Settings() As ModuleSettings
+  Get
+   If _modSettings Is Nothing Then
+    _modSettings = ModuleSettings.GetSettings(_module)
+   End If
+   Return _modSettings
+  End Get
+  Set(ByVal value As ModuleSettings)
+   _modSettings = value
+  End Set
+ End Property
 #End Region
 
 #Region " Page Events "
-  Private Sub NewsRss_Init(sender As Object, e As System.EventArgs) Handles Me.Init
+ Private Sub NewsRss_Init(sender As Object, e As System.EventArgs) Handles Me.Init
 
-    Common.ReadValue(Me.Request.Params, "PortalId", _portalId)
-    Common.ReadValue(Me.Request.Params, "TabId", _tabId)
-    Common.ReadValue(Me.Request.Params, "ModuleId", _moduleId)
+  Common.ReadValue(Me.Request.Params, "PortalId", _portalId)
+  Common.ReadValue(Me.Request.Params, "TabId", _tabId)
+  Common.ReadValue(Me.Request.Params, "ModuleId", _moduleId)
 
-  End Sub
+ End Sub
 
-  Private Sub NewsRss_Load(sender As Object, e As System.EventArgs) Handles Me.Load
+ Private Sub NewsRss_Load(sender As Object, e As System.EventArgs) Handles Me.Load
 
-    Dim objModules As New DotNetNuke.Entities.Modules.ModuleController
-    Dim objModule As DotNetNuke.Entities.Modules.ModuleInfo = objModules.GetModule(_moduleId)
-    If DotNetNuke.Security.Permissions.ModulePermissionController.CanViewModule(objModule) Then
-      _authorized = True
-    End If
+  Dim objModules As New DotNetNuke.Entities.Modules.ModuleController
+  _module = objModules.GetModule(_moduleId)
+  If DotNetNuke.Security.Permissions.ModulePermissionController.CanViewModule(_module) Then
+   _authorized = True
+  End If
 
-  End Sub
+ End Sub
 #End Region
 
 #Region " Render "
-  Protected Overrides Sub Render(ByVal writer As System.Web.UI.HtmlTextWriter)
+ Protected Overrides Sub Render(ByVal writer As System.Web.UI.HtmlTextWriter)
 
-    If Not _authorized Then
-      Me.Response.StatusCode = 401
-      Exit Sub
-    End If
+  If Not _authorized Then
+   Me.Response.StatusCode = 401
+   Exit Sub
+  End If
 
-    If Not IO.File.Exists(Me.PortalSettings.HomeDirectoryMapPath & "\Cache\" & Common.CacheFeedname(_moduleId)) Then Exit Sub
+  If Not IO.File.Exists(Me.PortalSettings.HomeDirectoryMapPath & "\Cache\" & Common.CacheFeedname(_moduleId)) Then Exit Sub
 
-    Me.Response.Clear()
-    Me.Response.ContentEncoding = System.Text.Encoding.UTF8
-    Me.Response.ContentType = "text/xml"
+  Me.Response.Clear()
+  Me.Response.ContentEncoding = System.Text.Encoding.UTF8
+  Me.Response.ContentType = "text/xml"
 
-    Using rdr As New IO.StreamReader(Me.PortalSettings.HomeDirectoryMapPath & "\Cache\" & Common.CacheFeedname(_moduleId))
-      Dim contents As String = rdr.ReadToEnd
-      writer.Write(contents)
-    End Using
+  Using rdr As New IO.StreamReader(Me.PortalSettings.HomeDirectoryMapPath & "\Cache\" & Common.CacheFeedname(_moduleId))
+   Dim contents As String = rdr.ReadToEnd
+   writer.Write(contents)
+  End Using
 
-    writer.Flush()
+  writer.Flush()
 
-  End Sub
+ End Sub
 #End Region
 
 End Class

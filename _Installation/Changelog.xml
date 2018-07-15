@@ -41,4 +41,7 @@
   <change type="Enhancement">Cosmetic improvements to the edit UI</change>
   <change type="Enhancement">Added RSS icon to main screen</change>
  </release>
+ <release version="05.01.00">
+  <change type="Enhancement">Updated to comply with DNN 8 API</change>
+ </release>
 </changelog>
