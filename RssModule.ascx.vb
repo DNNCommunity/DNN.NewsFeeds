@@ -84,6 +84,7 @@ Partial Public Class RssModule
   _needsRefresh = ((Not Settings.BackgroundDownload) Or (Not Me.IsPostBack And Me.Request.Params("ClearCache") IsNot Nothing)) AndAlso FeedController.HasExpiredFeeds(ModuleId, Settings.RetryTimes, Settings.RetryTimeOut)
   _loadAfterPage = (DotNetNuke.Framework.AJAX.IsInstalled And Me.ModuleConfiguration.CacheTime = 0 And _needsRefresh)
   _loadAfterPage = _loadAfterPage And Settings.UseAjax
+  rssLine.Visible = ModuleConfiguration.DisplaySyndicate
 
   If _loadAfterPage Then
    DotNetNuke.Framework.AJAX.RegisterScriptManager()
